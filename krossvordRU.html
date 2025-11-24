@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Новогодний кроссворд</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e6f2ff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #d40000;
+      text-align: center;
+    }
+
+    .crossword-grid {
+      display: grid;
+      grid-template-columns: repeat(15, 30px);
+      grid-template-rows: repeat(15, 30px);
+      gap: 1px;
+      margin: 20px auto;
+      background-color: #000;
+      border: 3px solid #000;
+    }
+
+    .cell {
+      width: 30px;
+      height: 30px;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 16px;
+      color: #000;
+      text-transform: uppercase;
+    }
+
+    .black {
+      background-color: #000;
+    }
+
+    .clues {
+      max-width: 600px;
+      margin-top: 20px;
+    }
+
+    .clues h2 {
+      color: #d40000;
+    }
+
+    .clue {
+      margin: 8px 0;
+    }
+
+    .number {
+      font-weight: bold;
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎄 Новогодний кроссворд 🎄</h1>
+
+  <div class="crossword-grid" id="grid"></div>
+
+  <div class="clues">
+    <h2>Слова по горизонтали:</h2>
+    <div class="clue"><span class="number">1.</span> Главное новогоднее дерево</div>
+    <div class="clue"><span class="number">4.</span> То, что получают под ёлкой</div>
+    <div class="clue"><span class="number">7.</span> Весёлое новогоднее событие</div>
+    <div class="clue"><span class="number">9.</span> Снежный человечек</div>
+    <div class="clue"><span class="number">10.</span> Напиток для праздничного тоста</div>
+
+    <h2>Слова по вертикали:</h2>
+    <div class="clue"><span class="number">1.</span> Волшебный дед с мешком подарков</div>
+    <div class="clue"><span class="number">2.</span> Яркое ночное украшение неба</div>
+    <div class="clue"><span class="number">3.</span> Внучка Деда Мороза</div>
+    <div class="clue"><span class="number">5.</span> Ароматный цитрусовый фрукт новогоднего стола</div>
+    <div class="clue"><span class="number">6.</span> Цепочка из огоньков на ёлке</div>
+  </div>
+
+  <script>
+    // Сетка 15x15
+    const size = 15;
+    const grid = Array(size).fill().map(() => Array(size).fill(''));
+
+    // Список слов с координатами (row, col, direction: 'h' или 'v')
+    const words = [
+      { word: "ЁЛКА", row: 0, col: 0, dir: 'h' },            // 1 горизонталь
+      { word: "ПОДАРКИ", row: 2, col: 2, dir: 'h' },         // 4 горизонталь
+      { word: "ПРАЗДНИК", row: 4, col: 0, dir: 'h' },        // 7 горизонталь
+      { word: "СНЕГОВИК", row: 6, col: 1, dir: 'h' },        // 9 горизонталь
+      { word: "ШАМПАНСКОЕ", row: 8, col: 0, dir: 'h' },      // 10 горизонталь
+
+      { word: "ДЕДМРОЗ", row: 0, col: 0, dir: 'v' },         // 1 вертикаль (без пробела)
+      { word: "ФЕЙЕРВЕРК", row: 0, col: 2, dir: 'v' },       // 2 вертикаль
+      { word: "СНЕГУРОЧКА", row: 0, col: 4, dir: 'v' },      // 3 вертикаль
+      { word: "МАНДАРИНЫ", row: 2, col: 6, dir: 'v' },       // 5 вертикаль
+      { word: "ГИРЛЯНДА", row: 0, col: 8, dir: 'v' }         // 6 вертикаль
+    ];
+
+    // Заполняем сетку
+    words.forEach(wordObj => {
+      const { word, row, col, dir } = wordObj;
+      for (let i = 0; i < word.length; i++) {
+        if (dir === 'h') {
+          grid[row][col + i] = word[i];
+        } else {
+          grid[row + i][col] = word[i];
+        }
+      }
+    });
+
+    // Создаём HTML-таблицу
+    const gridContainer = document.getElementById('grid');
+    for (let r = 0; r < size; r++) {
+      for (let c = 0; c < size; c++) {
+        const cell = document.createElement('div');
+        cell.className = 'cell';
+        if (grid[r][c] === '') {
+          cell.classList.add('black');
+        } else {
+          cell.textContent = grid[r][c];
+        }
+        gridContainer.appendChild(cell);
+      }
+    }
+  </script>
+</body>
+</html>
