@@ -34,9 +34,13 @@
 <p>b. ЦЩЕБФ - ВЕСНА. Ключь шифра Цезаря - 20</p>
 
 <p>b. МАНДЖИЕВА - ХТМЭСШЛЙ. Ключь шифра Цезаря - 10</p>
-<h2>21 января, 2026</h2>
+</h2>
 
-  <div class="section">
+<h2>21января , 2026</h2>
+
+ <h1>Учебный RSA-шифр (p = 17,q = 19)</h1>
+  
+ <div class="section">
     <h2>Параметры алгоритма</h2>
     <p><strong>p=17</strong>, <strong>q = 19</strong> - простые числа</p>
     <p><strong>n = p * q = 17 * 19 == 323</strong></p>
@@ -45,10 +49,10 @@
     <p><strong>d = 173</strong> - закрытая экспонента (5 * 173 mod 288 = 1)</p>
 
   </div class="keys">
-  <div>Открытый ключ: <code>(n=323, e=5)</code></div>
-  <div>Закрытый ключ: <code>(n=323, d=173)</code></div>
+   <div>Открытый ключ: <code>(n=323, e=5)</code></div>
+   <div>🔒 Закрытый ключ: <code>(n=323, d=173)</code></div>
   </div>
-  </div>
+</div>
   
   <p>Иконки
 <a target="_blank" href="https://icons8/com/icon/Te05gF2gRJfm/christmas-gift">New Year </a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
@@ -58,3 +62,7 @@
 </html>
 <p>Введите число jn <strong>1  до 333</strong> (должно быть &lt; n):</p>
 <input type="number" id="inputvale" min="1" MAX="333" value="42" />
+
+<br>
+<button onclick="encrypt()">🔓 Зашифровать</button>
+<button onclick="decrypt()">🔒 Расшифровать</button>
