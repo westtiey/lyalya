@@ -49,7 +49,7 @@
     <p><strong>d = 173</strong> - закрытая экспонента (5 * 173 mod 288 = 1)</p>
 
   </div class="keys">
-   <div>Открытый ключ: <code>(n=323, e=5)</code></div>
+   <div>🔑 Открытый ключ: <code>(n=323, e=5)</code></div>
    <div>🔒 Закрытый ключ: <code>(n=323, d=173)</code></div>
   </div>
 </div>
@@ -60,8 +60,8 @@
  <input type="number" id="inputvale" min="1" MAX="333" value="42" />
 
  <br>
- <button onclick="encrypt()">🔓 Зашифровать</button>
- <button onclick="decrypt()">🔒 Расшифровать</button>
+ <button onclick="encrypt()">🔒 Зашифровать</button>
+ <button onclick="decrypt()">🔓Расшифровать</button>
 
  <div class="result" id="output">Результат появится здесь</div>
  <p class="note">💡Пример: 42 → зашифруется в 287 → расшифруется обратно в 42</p>
@@ -94,7 +94,7 @@
  function encrypt() {    
    const m = parseInt(document.getElementById('value').value);     
    if (isNaN(m) m < 1 m >= n) {
-    document.getElementById('output').innerText = 'крестик тут Ошибка: введите симло от 1 до 322!';
+    document.getElementById('output').innerText = '❌ Ошибка: введите симло от 1 до 322!';
     return;
    }
    const c = modPow(m, e, n);
