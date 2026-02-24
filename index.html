@@ -1,130 +1,148 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<title>Мой блог</title>
-<link type = "text/css>" rel = "stylesheet" href = "style.css" />
+  <meta charset="UTF-8">
+  <title>Мой блог</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body> bgcolor="lightgreen">
-<blockquote class="q">Путешествие в тысячу миль начинается с одного шага (Лао Цзы) </blockquote>
+<body>
+  <h2>6 декабря, 2025</h2>
+  <img src="Icons/icons8-new-year-100.png" alt="Иконка">
+  Поздравление с Наступающим 2026 годом читайте <a href="Congratulations2026.html">здесь.</a>
 
-<h2>6 декабря , 2025 </h2>
-<img src="icons/icond8-new-year-100.png" alt="Иконка">
-Поздравление с Наступающим 2026 годом читатйте <a href="Congratulations2026.html">здесь.</a>
+  <h2>15 октября, 2025</h2>
+  <p>
+    Я сделала Новогодние кроссворды для сайта 
+    <a href="https://tatikantonova-wq.github.io/dem.github.io/" title="Блог моего друга">Сайт моего друга</a>.
+  </p>
 
-<h2> 15 октября , 2025</h2>
-<p>
-Я сделала Новогодние кроссворды для сайта <a href="http^://адрес сайта друга" title="Блог моего друга"Сайт моего друга</a>
-</p>
-
-<h2> 1 сентября, 2025</h2>
-<blockquote>Путешествие в тысячу миль начинается с одного шага (Лао Цзы) </blockquote>
-<p>
-Оставлю в прошлом скучную неинтересную лоакальную файловую систему ради Всемирной паутины.
-</p>
+  <blockquote>Путешествие в тысячу миль начинается с одного шага (Лао Цзы)</blockquote>
+    <blockquote class="q">Оставляю в прошлом скучную неинтересную локальную файловую систему ради Всемирной паутины.</blockquote>
+ <h2>19 декабря, 2025</h2>
+  
+ Поздравляю с наступающим 2026 <a href="Kolyadka2.odt"> здесь.</a><br>
+ <p>Поздравление с Рождеством 
+<video src="newTree.mp4" controls>
+  Ваш браузер не поддерживает тег video.
+</video>
 
 <h2>13 января, 2026</h2>
-<Домен: westtiey/lyalya.github.io . </p>
-<p> <a href=mailto:milana.mandhzieva2010@mail.com"Напишите мне</a></p>
+<p> Мой домен - westtiey/lyalya.github.io . </p>
+   <a href="mailto:mandhzieva2010@gmail.com">Напишите мне</a>
+ </p>
 
-  <h2>16 января, 2026</h2>
-<p>a. АПЕЛЬСИН - САНЬЦНВЩО. Ключь шифра Цезаря - 17</p>
-<p>b. АБРИКОС - ЫЬЛГЕЙМ. Ключь шифра Цезаря - 27</p>
+<h2>16 января, 2026</h2>
+  <p>а. АПЕЛЬСИН – САЦЬНВЩЮ. Ключ шифра Цезаря - 15</p>
+  <p>б. АБРИКОС – ЫЬЛГЕЙМ. Ключ шифра Цезаря - 5</p>
 
-<p>a. ФХНЗКЧ - ПРИВЕТ. Ключ шифра Цезаря - 5</p>
-<p>b. ЦЩЕБФ - ВЕСНА. Ключь шифра Цезаря - 20</p>
+  <p>а. ФХНЗКЧ - ПРИВЕТ. Ключ шифра Цезаря - 27</p>
+  <p>б. ЦЩЕБФ - ВЕСНА. Ключ шифра Цезаря - 12</p>
+  <p> МАНЛДЖИЕВА - ХТМЭСШЛЙ. Ключ шифра Цезаря - 10</p>
 
-<p>b. МАНДЖИЕВА - ХТМЭСШЛЙ. Ключь шифра Цезаря - 10</p>
-</h2>
+  <h2>21 января, 2026</h2>
 
-<h2>21января , 2026</h2>
+<h1>Учебная реализация RSA (p = 7, q = 11)</h1>
 
- <h1>Учебный RSA-шифр (p = 17,q = 19)</h1>
-  
- <div class="section">
-    <h2>Параметры алгоритма</h2>
-    <p><strong>p=17</strong>, <strong>q = 19</strong> - простые числа</p>
-    <p><strong>n = p * q = 17 * 19 == 323</strong></p>
-    <p><strong>ф(n) = (p-1)(q-1) = 16 * 18 = 288</strong></p>
-    <p><strong>e = 5</strong> - открытая экспонента (НОД(5, 288) = 1)</p>
-    <p><strong>d = 173</strong> - закрытая экспонента (5 * 173 mod 288 = 1)</p>
-
-  </div class="keys">
-   <div>🔑 Открытый ключ: <code>(n=323, e=5)</code></div>
-   <div>🔒 Закрытый ключ: <code>(n=323, d=173)</code></div>
-  </div>
+<div class="step">
+  <h2>1. Выбор простых чисел</h2>
+  <p>Выбираем два простых числа:</p>
+  <pre>p = 7<br>q = 11</pre>
 </div>
-  
-<div class="section"
- <h2>Попробуй сам!</h2> 
- <p>Введите число jn <strong>1  до 333</strong> (должно быть &lt; n):</p>
- <input type="number" id="inputvale" min="1" MAX="333" value="42" />
 
- <br>
- <button onclick="encrypt()">🔒 Зашифровать</button>
- <button onclick="decrypt()">🔓Расшифровать</button>
+<div class="step">
+  <h2>2. Вычисление n</h2>
+  <p>n = p × q = 7 × 11 = <span class="result">77</span></p>
+</div>
 
- <div class="result" id="output">Результат появится здесь</div>
- <p class="note">💡Пример: 42 → зашифруется в 287 → расшифруется обратно в 42</p>
+<div class="step">
+  <h2>3. Вычисление φ(n)</h2>
+  <p>φ(n) = (p − 1)(q − 1) = (7 − 1)(11 − 1) = 6 × 10 = <span class="result">60</span></p>
+</div>
+
+<div class="step">
+  <h2>4. Выбор открытой экспоненты e</h2>
+  <p>Выбираем e так, чтобы 1 &lt; e &lt; φ(n) и НОД(e, φ(n)) = 1.</p>
+  <p>Пример: e = 7 → НОД(7, 60) = 1 → ✅</p>
+  <p>Открытый ключ: <span class="result">(n, e) = (77, 7)</span></p>
+</div>
+
+<div class="step">
+  <h2>5. Вычисление закрытого ключа d</h2>
+  <p>Находим d такое, что (e × d) mod φ(n) = 1</p>
+  <p>(7 × d) mod 60 = 1 → d = 43 (поскольку 7×43 = 301, 301 mod 60 = 1)</p>
+  <p>Закрытый ключ: <span class="result">(n, d) = (77, 43)</span></p>
+</div>
+
+<div class="step">
+  <h2>6. Шифрование и расшифровка</h2>
+  <p>Введите целое число m, где 0 ≤ m &lt; 77:</p>
+  <input type="number" id="messageInput" min="0" max="76" value="2" />
+  <button onclick="processMessage()">Обработать</button>
+  <div id="output"></div>
 </div>
 
 <script>
-  // Параметры RSA 
-  const p = 17;
-  const q = 19;  
-  const n = p * q;
-  const phi = (p - 1) * (q - 1) // 323
-  const e = 5;
-  const d = 173;
+  function gcd(a, b) {
+    while (b !== 0) {
+      [a, b] = [b, a % b];
+    }
+    return a;
+  }
 
-  //Быстрое возведение в степень по модулю (a^b mod m)
-  function modPow(base, exp, mod) {
+  // Быстрое модульное возведение в степень
+  function modExp(base, exp, mod) {
     if (mod === 1) return 0;
     let result = 1;
     base = base % mod;
     while (exp > 0) {
-     if (exp % 2 === 1) {
-      result = (result * base) % mod;
-     }
-     exp = Math.floor(exp / 2);
-     base = (base * base) % mod;
-   }
-   return result;
- }
-
- function encrypt() {    
-   const m = parseInt(document.getElementById('value').value);     
-   if (isNaN(m) m < 1 m >= n) {
-    document.getElementById('output').innerText = '❌ Ошибка: введите симло от 1 до 322!';
-    return;
-   }
-   const c = modPow(m, e, n);
-   document.getElementById('output')innerText = Зашифровано ${m} → ${c};
- } 
-
- function decrypt() {
-   const c = parseInt(document.getElementById('inputValue').value);
-   if (isNaN(c) || c < 0) {
-     document.getElementById('output').innerText = '❌ Ошибка: введите корректное число!';
-     return
+      if (exp % 2 === 1) {
+        result = (result * base) % mod;
+      }
+      exp = Math.floor(exp / 2);
+      base = (base * base) % mod;
     }
-    const m = modPow(c, d, n);
-    document.getElementById('output').innerText = Расшифровано: ${c} → ${m};
+    return result;
   }
+
+  function processMessage() {
+    const m = parseInt(document.getElementById('messageInput').value);
+    const n = 77;
+    const e = 7;
+    const d = 43;
+
+    if (isNaN(m)  m < 0  m >= n) {
+      document.getElementById('output').innerHTML = 
+        '<p style="color:red;">Ошибка: m должно быть целым числом от 0 до 76!</p>';
+      return;
+    }
+
+    const C = modExp(m, e, n);
+    const M = modExp(C, d, n);
+
+    document.getElementById('output').innerHTML = `
+      <p>Исходное сообщение: <span class="result">${m}</span></p>
+      <p>Шифротекст C = m<sup>e</sup> mod n = ${m}<sup>${e}</sup> mod ${n} = <span class="result">${C}</span></p>
+      <p>Расшифровка M = C<sup>d</sup> mod n = ${C}<sup>${d}</sup> mod ${n} = <span class="result">${M}</span></p>
+      ${M === m ? '<p style="color:green;">✅ Сообщение успешно восстановлено!</p>' : '<p style="color:red;">❌ Ошибка расшифровки!</p>'}
+    `;
+  }
+
+  // Запуск при загрузке
+  window.onload = () => processMessage();
 </script>
-
-</body>
-</html>
-
-<head><link href="hnnps://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
-</style>
-   body {
-     font-family: 'Fredoka One', cursive !important;
-   } 
-</style></head>
-
-  <a target="_blank" href="https://icons8.com/icon/17330/cristmas-tree">Новый год</a> иконка от <a target="_blank" href="https://icons8.com">Icons8</a>
-</body>
-
+  <h2>18 февраля, 2026</h2>
+  <p>Топ-3 предсказаний:
+Pomeranian: 96.23%
+Samoyed: 1.26%
+Papillon: 0.59%
+  </p>
+  <img src="Icons/dog.jpeg" alt="Собака">
+  
+  
+  
+  <p>Иконки:
+<a target="_blank" href="https://icons8.com/icon/Te05gF2gRJfm/christmas-gift">New Year</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+  </p>
 
 
   
